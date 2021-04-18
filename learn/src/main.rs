@@ -10,7 +10,8 @@
 // mod pointer_refs;
 // mod structs;
 // mod enums;
-mod cli;
+// mod cli;
+mod guess_number;
 
 fn main() {
     // print::print();
@@ -25,6 +26,6 @@ fn main() {
     // pointer_refs::run();
     // structs::run();
     // enums::run();
-    cli::run();
-
+    // cli::run();
+    guess_number::run();
 }
