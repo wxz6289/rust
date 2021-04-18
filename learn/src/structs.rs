@@ -6,6 +6,8 @@ pub fn run(){
     };
     c.red = 120;
     println!("{:?}", (c.red, c.green, c.blue));
+
+    // Tuple Struct
     let mut c2 = Color2(110, 20);
     c2.0 = 21;
     println!("{:?}", (c2.0, c2.1));
