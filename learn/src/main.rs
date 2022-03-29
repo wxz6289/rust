@@ -1,4 +1,5 @@
-// mod print;
+// mod a01_print;
+// mod common_concept::vars;
 // mod vars;
 // mod types;
 // mod string;
@@ -11,10 +12,14 @@
 // mod structs;
 // mod enums;
 // mod cli;
-mod guess_number;
+// mod guess_number;
+// mod variables;
+// mod truple;
+// mod function;
+mod condition;
 
 fn main() {
-    // print::print();
+    // a01_print::print();
     // vars::print_vars();
     // types::run();
     // string::run();
@@ -27,5 +32,11 @@ fn main() {
     // structs::run();
     // enums::run();
     // cli::run();
-    guess_number::run();
+    // guess_number::run();
+    // variables::vars3();
+    // truple::truple()
+  /*  let r =  function::function(12);
+   println!("{:?}", r);
+   function::run(); */
+   condition::run();
 }

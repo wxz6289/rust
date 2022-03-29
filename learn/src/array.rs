@@ -8,4 +8,8 @@ pub fn run() {
     println!("{}", std::mem::size_of_val(&numbers));
     let slice: &[i32] = &numbers[0..2];
     println!("{:?}", slice);
+    let a = [3; 5];
+    let idx = 5;
+    println!("{:?}", a);
+    println!("{:?}", a[idx])
 }

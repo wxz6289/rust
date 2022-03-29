@@ -10,7 +10,7 @@ pub fn print() {
         activity = "Baseball"
     );
     // Placeholder trait
-    println!("Binary: {:b} Hex: {:x} Octal: {:o}", 10, 10, 10);
+    println!("Binary: {:b}; Hex: {:x}; Octal: {:o}", 10, 10, 10);
     // Placeholder for debug trait
     println!("{:?}", (12, true, "Hello"));
     // Basic Math 
