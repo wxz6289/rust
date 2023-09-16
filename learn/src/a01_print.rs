@@ -1,8 +1,11 @@
 pub fn print() {
     println!("Hello, world!");
-    println!("{} from {}",1, "Number");
+    println!("{} from {}", 1, "Number");
     // Positional Arguments
-    println!("{0} is from {1} and {0} likes to {2}", "brand", "Mass", "Code");
+    println!(
+        "{0} is from {1} and {0} likes to {2}",
+        "brand", "Mass", "Code"
+    );
     // Named Arguments
     println!(
         "{name} likes to paly {activity}",
@@ -13,6 +16,6 @@ pub fn print() {
     println!("Binary: {:b}; Hex: {:x}; Octal: {:o}", 10, 10, 10);
     // Placeholder for debug trait
     println!("{:?}", (12, true, "Hello"));
-    // Basic Math 
+    // Basic Math
     println!("10 + 10 = {}", 10 + 10);
 }

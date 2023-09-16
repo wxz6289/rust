@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "jinxdash.prettier-rust",
+    "swellaby.rust-pack",
+    "dustypomerleau.rust-syntax",
+    "rust-lang.rust-analyzer"
+  ]
+}

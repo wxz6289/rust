@@ -1,5 +1,6 @@
 // mod a01_print;
-// mod common_concept::vars;
+// mod common_concept;
+// use common_concept::{hello, vars, circuration};
 // mod vars;
 // mod types;
 // mod string;
@@ -10,18 +11,27 @@
 // mod functions;
 // mod pointer_refs;
 // mod structs;
+mod retangle;
 // mod enums;
 // mod cli;
 // mod guess_number;
 // mod variables;
 // mod truple;
 // mod function;
-mod condition;
-
+// mod condition;
+// mod shade_vars;
 fn main() {
+    // hello::hello();
+    // vars::var();
+    // vars::mut_var();
+    // vars::shade_var();
+    // vars::repeat_var();
+    // circuration::loop_num();
+    // variables::run();
     // a01_print::print();
     // vars::print_vars();
     // types::run();
+    // types::dtype();
     // string::run();
     // array::run();
     // vectors::run();
@@ -30,13 +40,15 @@ fn main() {
     // functions::run();
     // pointer_refs::run();
     // structs::run();
+    // structs::show_user();
+    retangle::show_tangle();
     // enums::run();
     // cli::run();
-    // guess_number::run();
-    // variables::vars3();
+    // guess_number::guess_number();
+    // guess_number::learn_rand();
     // truple::truple()
-  /*  let r =  function::function(12);
-   println!("{:?}", r);
-   function::run(); */
-   condition::run();
+    /*  let r =  function::function(12);
+    println!("{:?}", r);
+    function::run(); */
+    // condition::run();
 }

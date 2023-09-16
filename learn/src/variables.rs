@@ -13,8 +13,13 @@ pub fn vars2() {
 }
 
 pub fn vars3() {
-    let  spaces = "    ";
+    let spaces = "    ";
     let spaces = spaces.len();
     println!("{}", spaces);
 }
 
+pub fn run() {
+    vars();
+    vars2();
+    vars3();
+}
