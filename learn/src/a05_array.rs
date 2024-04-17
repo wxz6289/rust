@@ -1,4 +1,5 @@
-pub fn run() {
+#[test]
+pub fn test_array() {
     let mut numbers: [i32; 5] = [1, 2, 3, 4, 5];
     println!("{:?}", numbers);
     numbers[1] = 22;
@@ -11,5 +12,7 @@ pub fn run() {
     let a = [3; 5];
     let idx = 5;
     println!("{:?}", a);
-    println!("{:?}", a[idx])
+    // println!("{:?}", a[idx]);
+    let b: [f32; 3] = [1f32, 2f32, 3f32];
+    println!("{:?}", b);
 }

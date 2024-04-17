@@ -1,3 +1,4 @@
+#[test]
 pub fn print() {
     println!("Hello, world!");
     println!("{} from {}", 1, "Number");
@@ -18,4 +19,9 @@ pub fn print() {
     println!("{:?}", (12, true, "Hello"));
     // Basic Math
     println!("10 + 10 = {}", 10 + 10);
+    let (name, age) = ("King", 20);
+    println!("Name is {name} age is {age}");
+
+    let x = 23;
+    println!("x is {x}")
 }

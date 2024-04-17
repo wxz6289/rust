@@ -1,54 +1,9 @@
-// mod a01_print;
-// mod common_concept;
-// use common_concept::{hello, vars, circuration};
-// mod vars;
-// mod types;
-// mod string;
-// mod array;
-// mod vectors;
-// mod conditions;
-// mod loops;
-// mod functions;
-// mod pointer_refs;
-// mod structs;
-mod retangle;
-// mod enums;
-// mod cli;
-// mod guess_number;
-// mod variables;
-// mod truple;
-// mod function;
-// mod condition;
-// mod shade_vars;
-fn main() {
-    // hello::hello();
-    // vars::var();
-    // vars::mut_var();
-    // vars::shade_var();
-    // vars::repeat_var();
-    // circuration::loop_num();
-    // variables::run();
-    // a01_print::print();
-    // vars::print_vars();
-    // types::run();
-    // types::dtype();
-    // string::run();
-    // array::run();
-    // vectors::run();
-    // conditions::run();
-    // loops::run();
-    // functions::run();
-    // pointer_refs::run();
-    // structs::run();
-    // structs::show_user();
-    retangle::show_tangle();
-    // enums::run();
-    // cli::run();
-    // guess_number::guess_number();
-    // guess_number::learn_rand();
-    // truple::truple()
-    /*  let r =  function::function(12);
-    println!("{:?}", r);
-    function::run(); */
-    // condition::run();
-}
+// mod a07_fn;
+mod a01_print;
+mod a08_expression_statement;
+mod a09_control_flow;
+mod structs;
+pub mod a03_types_i8;
+mod a02_vars;
+
+fn main() {}

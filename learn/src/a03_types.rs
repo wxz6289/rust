@@ -1,3 +1,4 @@
+#[test]
 pub fn run() {
     // Default is i32
     let _x = 1;
@@ -13,9 +14,15 @@ pub fn run() {
     let is_greeter = 10 > 5;
     let face = '\u{1f600}';
     println!("{:?}", (_x, _y, _z, is_active, face));
+
+    let x = 7_2_02i16;
+    println!("{x}");
 }
 
+#[test]
 pub fn dtype() {
     let guess: u32 = "42".parse().expect("Invalid type");
+    println!("{:?}", guess);
+    let guess: i32 = "xxx".parse().expect("Invalid type");
     println!("{:?}", guess);
 }
