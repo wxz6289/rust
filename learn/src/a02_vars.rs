@@ -17,8 +17,9 @@ pub fn test_var() {
     let mut x = 5;
     println!("{x}");
     x = x + 1;
-    println!("{}", x);
+    println!("{x}");
 }
+
 #[test]
 pub fn var() {
     let x = 5;
@@ -45,6 +46,7 @@ pub fn shade_var() {
     }
     println!("out {}", x);
 }
+
 #[test]
 pub fn repeat_var() {
     let spaces = "     ";

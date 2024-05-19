@@ -1,5 +1,4 @@
 // mod a07_fn;
-mod a01_print;
 mod a08_expression_statement;
 mod a09_control_flow;
 mod structs;

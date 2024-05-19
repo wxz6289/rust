@@ -1,0 +1,7 @@
+[package]
+name = "rtest"
+version = "0.1.0"
+authors = ["wangxianzhao <wangxianzhao@mokuai.com>"]
+edition = "2018"
+
+[dependencies]
