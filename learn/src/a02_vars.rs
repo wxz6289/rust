@@ -1,6 +1,7 @@
 #[test]
 pub fn print_vars() {
     let name = "Brand";
+    let s = "hello".to_string();
     let mut age = 36;
     println!("Name is {} age is {}", name, age);
     age = 20;
@@ -30,7 +31,7 @@ pub fn var() {
 
 #[test]
 pub fn mut_var() {
-    let mut x = 15;
+    let mut x= 15;
     println!("{}", x);
     x = x + 1;
     println!("{}", x);

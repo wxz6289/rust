@@ -102,3 +102,55 @@ fn test_range_for() {
     }
     println!("finished!");
 }
+
+#[test]
+fn test_vec(){
+    let mut v = Vec::new();
+    for i in 101 .. 106 {
+        v.push(i.to_string());
+    }
+    let third = &v[3];
+    let fifth = &v[4];
+    println!("{} {}", third, fifth);
+}
+
+#[test]
+fn test_vec2(){
+    let mut v = Vec::new();
+    for i in 101 .. 106 {
+        v.push(i.to_string());
+    }
+    let fifth = v.pop().expect("vector empty");
+    assert_eq!(fifth, "105");
+    let second = v.swap_remove(1);
+    assert_eq!(second, "102");
+    println!("{:?}", v);
+    let third = std::mem::replace(&mut v[2], "king".to_string());
+    assert_eq!(third, "103");
+    println!("{:?}", v);
+}
+
+#[test]
+fn print_string(){
+    let mut s = vec!["King".to_string(), "Dreamer".to_string()];
+    for mut t in s {
+        t.push('!');
+        println!("{}", t);
+    }
+}
+
+
+#[test]
+fn test_swap(){
+    struct Person {
+        name: Option<String>,
+        birth: u32,
+    }
+    let mut composers = Vec::new();
+    composers.push(Person { name: Some("King".to_string()), birth: 23 });
+    // let name = composers[0].name;
+    // let name = std::mem::replace(&mut composers[0].name, None);
+    let name = composers[0].name.take();
+    println!("{:?}", name);
+    println!("{:?}", composers[0].name);
+}

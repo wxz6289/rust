@@ -21,3 +21,11 @@ pub fn run() {
     assert_eq!(11, s.capacity());
     println!("{}", s);
 }
+
+#[test]
+fn test_string(){
+    let mut s = "King".to_string();
+    let t = s;
+    s = "Dreamer".to_string();
+    println!("{} {}", t, s);
+}

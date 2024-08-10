@@ -35,6 +35,7 @@ fn test_max() {
     let array = vec![23, 12, 43, 56, 2, 90, 32];
     let m = max(&array);
     println!("max is {} ", m);
-    let mx = general_max(list);
+    let mx = general_max(&array);
     println!("general_max is {}", mx);
 }
+
