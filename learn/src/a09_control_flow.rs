@@ -1,3 +1,5 @@
+use std::time::{Duration, Instant};
+
 #[test]
 fn test_if() {
     let num = 3;
@@ -153,4 +155,23 @@ fn test_swap(){
     let name = composers[0].name.take();
     println!("{:?}", name);
     println!("{:?}", composers[0].name);
+}
+
+#[test]
+pub fn test_time() {
+  let mut count = 0;
+  let time_limit = Duration::new(1, 0);
+  let start = Instant::now();
+  while (Instant::now() - start) < time_limit {
+    count += 1;
+  }
+  println!("{}", count);
+}
+
+#[test]
+pub fn test_loop() {
+  let a = loop {
+    break 123
+  };
+  println!("{}", a);
 }

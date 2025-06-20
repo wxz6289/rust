@@ -1,4 +1,6 @@
-mod a12_rc;
-mod a02_vars;
+mod parse_args;
+mod gcd;
 
-fn main() {}
+fn main() {
+    parse_args::parse_arg();
+}
