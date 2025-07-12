@@ -1,7 +1,2 @@
 learn/.ipynb_checkpoints
-web/target
-rustlings/target
-Q7/target
-parse-csv/target
-my-redis/target
 **/target
