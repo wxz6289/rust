@@ -1,7 +1,12 @@
 {
   "cSpell.words": [
     "actix",
+    "clippy",
     "Deque",
+    "nums",
+    "rustc",
+    "rustup",
+    "wasmtime",
     "webassembly"
   ],
   "rust-analyzer.server.path": null

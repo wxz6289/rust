@@ -132,7 +132,7 @@ rustup component add rls        # Language Server
 # 查看本地文档
 rustup doc
 
-# 完全卸载 Rust
+# 完全卸载 Rust 和 rustup
 rustup self uninstall
 ```
 
@@ -198,6 +198,13 @@ cargo run -v
 
 # 只检查代码，不生成可执行文件（速度更快）
 cargo check
+```
+
+### crate管理
+
+```bash
+cargo install cargo-edit
+cargo add <crate_name>
 ```
 
 #### 测试与文档
@@ -278,6 +285,16 @@ cargo clippy -- -D warnings
 
 # 修复可自动修复的问题
 cargo clippy --fix
+```
+
+## rust-analyzer - 语言服务器
+
+```bash
+# 安装 rust-analyzer
+rustup component add rust-analyzer
+
+# 启动语言服务器
+rust-analyzer
 ```
 
 ## 配置镜像源
@@ -376,18 +393,18 @@ path = "examples/example_name.rs"
 
 ## 常用命令速查
 
-| 命令 | 功能 |
-|------|------|
-| `cargo new <name>` | 创建新项目 |
-| `cargo build` | 编译项目 |
-| `cargo run` | 编译并运行 |
-| `cargo test` | 运行测试 |
-| `cargo check` | 快速语法检查 |
-| `cargo fmt` | 格式化代码 |
-| `cargo clippy` | 代码检查 |
-| `cargo doc` | 生成文档 |
-| `cargo clean` | 清理构建文件 |
-| `cargo update` | 更新依赖 |
-| `rustup update` | 更新 Rust |
+| 命令               | 功能         |
+|--------------------|------------|
+| `cargo new <name>` | 创建新项目   |
+| `cargo build`      | 编译项目     |
+| `cargo run`        | 编译并运行   |
+| `cargo test`       | 运行测试     |
+| `cargo check`      | 快速语法检查 |
+| `cargo fmt`        | 格式化代码   |
+| `cargo clippy`     | 代码检查     |
+| `cargo doc`        | 生成文档     |
+| `cargo clean`      | 清理构建文件 |
+| `cargo update`     | 更新依赖     |
+| `rustup update`    | 更新 Rust    |
 
 这样你就拥有了一个完整的 Rust 开发环境！从基本概念到实际开发工具，这份指南应该能帮助你快速上手 Rust 编程。
