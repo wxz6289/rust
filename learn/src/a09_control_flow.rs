@@ -1,4 +1,4 @@
-use std::time::{Duration, Instant};
+use std::time::{ Duration, Instant };
 
 #[test]
 fn test_if() {
@@ -50,7 +50,7 @@ fn test_loop_return_value() {
         println!("loop!");
         counter += 1;
         if counter >= 3 {
-            break counter;
+            break counter * 2;
         }
     };
     println!("result is {}", result);
@@ -66,18 +66,40 @@ fn test_while() {
     println!("result is {}", counter);
 }
 
-/* #[test]
+#[test]
 fn test_while_return_value() {
     let mut counter = 0;
-    let result = while counter < 3 {
+    let result = 'counter: while counter < 3 {
         println!("while again ...");
         counter += 1;
         if counter == 2 {
-            break counter; // while 语句中不能使用break
+            break 'counter;
+            // break 'counter 32; // 带返回值的break语句需要在内层循环或loop中使用
         }
     };
-    println!("result is {}", counter);
-} */
+    println!("result is {:?}", result);
+}
+
+#[test]
+fn test_loop_label() {
+    let mut counter = 0;
+    let result = 'outer: loop {
+        println!("counter is {}", counter);
+        let mut remaining = 10;
+        loop {
+            println!("remaining is {}", remaining);
+            if remaining == 9 {
+                break;
+            }
+            if counter == 2 {
+                break 'outer remaining;
+            }
+            remaining -= 1;
+        }
+        counter += 1;
+    };
+    println!("result is {:?}", result);
+}
 
 #[test]
 fn test_iterate_array() {
@@ -106,9 +128,9 @@ fn test_range_for() {
 }
 
 #[test]
-fn test_vec(){
+fn test_vec() {
     let mut v = Vec::new();
-    for i in 101 .. 106 {
+    for i in 101..106 {
         v.push(i.to_string());
     }
     let third = &v[3];
@@ -117,9 +139,9 @@ fn test_vec(){
 }
 
 #[test]
-fn test_vec2(){
+fn test_vec2() {
     let mut v = Vec::new();
-    for i in 101 .. 106 {
+    for i in 101..106 {
         v.push(i.to_string());
     }
     let fifth = v.pop().expect("vector empty");
@@ -133,7 +155,7 @@ fn test_vec2(){
 }
 
 #[test]
-fn print_string(){
+fn print_string() {
     let mut s = vec!["King".to_string(), "Dreamer".to_string()];
     for mut t in s {
         t.push('!');
@@ -141,9 +163,8 @@ fn print_string(){
     }
 }
 
-
 #[test]
-fn test_swap(){
+fn test_swap() {
     struct Person {
         name: Option<String>,
         birth: u32,
@@ -159,19 +180,19 @@ fn test_swap(){
 
 #[test]
 pub fn test_time() {
-  let mut count = 0;
-  let time_limit = Duration::new(1, 0);
-  let start = Instant::now();
-  while (Instant::now() - start) < time_limit {
-    count += 1;
-  }
-  println!("{}", count);
+    let mut count = 0;
+    let time_limit = Duration::new(1, 0);
+    let start = Instant::now();
+    while Instant::now() - start < time_limit {
+        count += 1;
+    }
+    println!("{}", count);
 }
 
 #[test]
-pub fn test_loop() {
-  let a = loop {
-    break 123
-  };
-  println!("{}", a);
+pub fn test_loop2() {
+    let a = loop {
+        break 123;
+    };
+    println!("{}", a);
 }

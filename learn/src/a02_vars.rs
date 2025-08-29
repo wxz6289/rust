@@ -1,4 +1,33 @@
 #[test]
+pub fn learn_vars() {
+    let a;
+    // println!("a is {}", a);
+    a = 10;
+    println!("a is {}", a);
+}
+
+#[test]
+pub fn learn_const() {
+    println!("PI is {}", PI);
+}
+const PI: f64 = 3.1415926;
+
+#[test]
+pub fn learn_shadow() {
+    println!("PI is {}", PI);
+}
+
+#[test]
+pub fn learn_mut() {
+    let a = 2;
+    println!("a is {}", a);
+    let mut a = 10;
+    println!("a is {}", a);
+    a = 20;
+    println!("a is {}", a);
+}
+
+#[test]
 pub fn print_vars() {
     let name: &'static str = "Brand";
     let s = "hello".to_string();
@@ -31,7 +60,7 @@ pub fn var() {
 
 #[test]
 pub fn mut_var() {
-    let mut x= 15;
+    let mut x = 15;
     println!("{}", x);
     x = x + 1;
     println!("{}", x);

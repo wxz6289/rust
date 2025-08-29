@@ -81,3 +81,25 @@ fn test_fn_generic_param() {
     let gv: Vec<u8> = (0..7).collect();
     println!("gv > {:?}", gv);
 }
+
+#[test]
+fn test_multi_assignment() {
+    //    let x = (let y = 2);
+    // let x: i32 = let y = 2;
+    let x = {
+        let y = 2;
+        y
+    };
+    println!("x = {}", x);
+    // println!("y = {}", y);
+}
+
+#[test]
+fn test_assign_multi() {
+    let mut y;
+    let x = {
+        y = 5;
+        y
+    };
+    println!("x = {}, y = {}", x, y);
+}
