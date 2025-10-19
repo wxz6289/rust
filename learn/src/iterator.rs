@@ -1,15 +1,13 @@
 #[test]
 fn log() {
-    use std::iter::{ once, repeat };
+    use std::iter::{once, repeat};
 
     let fizzes = repeat("").take(2).chain(once("fizz")).cycle();
     let buzzes = repeat("").take(4).chain(once("buzz")).cycle();
     let fizz_buzzes = fizzes.zip(buzzes);
-    let fizz_buzz = (1..100).zip(fizz_buzzes).map(|tuple| {
-        match tuple {
-            (i, ("", "")) => i.to_string(),
-            (_, (fizz, buzz)) => format!("{}{}", fizz, buzz),
-        }
+    let fizz_buzz = (1..100).zip(fizz_buzzes).map(|tuple| match tuple {
+        (i, ("", "")) => i.to_string(),
+        (_, (fizz, buzz)) => format!("{}{}", fizz, buzz),
     });
 
     for line in fizz_buzz {
@@ -83,7 +81,7 @@ fn test_eq_lt_gt() {
 }
 
 #[test]
-fn test_any(){
+fn test_any() {
     let id = "Iterator";
     assert!(id.chars().any(|c| c.is_uppercase()));
     assert!(!id.chars().all(|c| c.is_lowercase()));

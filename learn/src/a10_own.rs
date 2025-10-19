@@ -21,9 +21,18 @@ struct Person {
 #[test]
 fn test_person() {
     let mut composers = Vec::new();
-    composers.push(Person { name: "King".to_string(), birth: 1990 });
-    composers.push(Person { name: "Dreamer".to_string(), birth: 2026 });
-    composers.push(Person { name: "Panpan".to_string(), birth: 2000 });
+    composers.push(Person {
+        name: "King".to_string(),
+        birth: 1990,
+    });
+    composers.push(Person {
+        name: "Dreamer".to_string(),
+        birth: 2026,
+    });
+    composers.push(Person {
+        name: "Panpan".to_string(),
+        birth: 2000,
+    });
     for composer in composers {
         println!("{} -> {}", composer.name, composer.birth);
     }

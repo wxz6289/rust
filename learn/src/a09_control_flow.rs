@@ -1,4 +1,4 @@
-use std::time::{ Duration, Instant };
+use std::time::{Duration, Instant};
 
 #[test]
 fn test_if() {
@@ -170,7 +170,10 @@ fn test_swap() {
         birth: u32,
     }
     let mut composers = Vec::new();
-    composers.push(Person { name: Some("King".to_string()), birth: 23 });
+    composers.push(Person {
+        name: Some("King".to_string()),
+        birth: 23,
+    });
     // let name = composers[0].name;
     // let name = std::mem::replace(&mut composers[0].name, None);
     let name = composers[0].name.take();

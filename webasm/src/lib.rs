@@ -69,16 +69,13 @@ fn main() {
                     let idx = self.get_index(row, col);
                     let cell = self.cells[idx];
                     let live_neighbors = self.live_neighbor_count(row, col);
-                    next.set(
-                        idx,
-                        match (cell, live_neighbors) {
-                            (true, x) if x < 2 => false,
-                            (true, 2) | (true, 3) => true,
-                            (true, x) if x > 3 => false,
-                            (false, 3) => true,
-                            (otherwise, _) => otherwise,
-                        },
-                    );
+                    next.set(idx, match (cell, live_neighbors) {
+                        (true, x) if x < 2 => false,
+                        (true, 2) | (true, 3) => true,
+                        (true, x) if x > 3 => false,
+                        (false, 3) => true,
+                        (otherwise, _) => otherwise,
+                    });
                     /*
                     let next_cell = match (cell, live_neighbors) {
                         // Rule 1: Any live cell with fewer than two live neighbours
@@ -121,7 +118,7 @@ fn main() {
             let width = 64;
             let height = 64;
             let size: usize = (width * height) as usize;
-            let cells = FixedBitSet::with_capacity(size);
+            let mut cells = FixedBitSet::with_capacity(size);
             for i in 0..size {
                 cells.set(i, i % 2 == 0 || i % 7 == 0);
             }
