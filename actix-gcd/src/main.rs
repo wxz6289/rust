@@ -1,4 +1,4 @@
-use actix_web::{web,get, post, App, HttpResponse, Responder, HttpServer};
+use actix_web::{ web, get, post, App, HttpResponse, Responder, HttpServer };
 use serde::Deserialize;
 
 #[actix_web::main]
@@ -6,14 +6,17 @@ async fn main() -> std::io::Result<()> {
     println!("Starting server at http://localhost:8080");
 
     HttpServer::new(|| {
-        App::new().service(get_index).service(post_gcd).service(hello).service(echo)
+        App::new()
+            .service(get_index)
+            .service(post_gcd)
+            .service(hello)
+            .service(echo)
             .route("/manual_hello", web::get().to(manual_hello))
-           // .route("/", web::get().to(get_index))
-           // .route("/gcd", web::post().to(post_gcd))
+        // .route("/", web::get().to(get_index))
+        // .route("/gcd", web::post().to(post_gcd))
     })
-    .bind("127.0.0.1:8080")?
-    .run()
-    .await
+        .bind("127.0.0.1:8080")?
+        .run().await
 }
 
 #[derive(Deserialize)]
@@ -23,10 +26,11 @@ struct GCDParams {
 }
 
 #[get("/")]
-async fn get_index() -> HttpResponse   {
+async fn get_index() -> HttpResponse {
     HttpResponse::Ok()
         .content_type("text/html")
-        .body(r#"
+        .body(
+            r#"
             <!DOCTYPE html>
             <html>
             <head>
@@ -41,25 +45,22 @@ async fn get_index() -> HttpResponse   {
                 </form>
             </body>
             </html>
-        "#)
+        "#
+        )
 }
 
 #[get("/hello")]
 async fn hello() -> impl Responder {
-    HttpResponse::Ok()
-        .content_type("text/plain")
-        .body("Hello, world!")
+    HttpResponse::Ok().content_type("text/plain").body("Hello, world!")
 }
 
 #[post("/echo")]
 async fn echo(req_body: String) -> impl Responder {
-    HttpResponse::Ok()
-        .body(req_body)
+    HttpResponse::Ok().body(req_body)
 }
 
 async fn manual_hello() -> impl Responder {
-    HttpResponse::Ok()
-        .body("Hello, world!")
+    HttpResponse::Ok().body("Hello, world!")
 }
 
 #[post("/gcd")]

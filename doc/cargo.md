@@ -29,10 +29,9 @@ my_project/
 ### Cargo.toml
 
 项目配置文件，主要用来描述：
-
 - 包名
-- 版本号
-- Rust edition
+- 版本号 version
+- Rust edition <YEAR>
 - 依赖项
 - 构建配置
 
@@ -374,12 +373,15 @@ cargo upgrade
 cargo new project_name
 cargo run
 cargo check
+# 构建发布版本
 cargo build --release
 cargo test
 cargo fmt
 cargo clippy
 cargo tree
+# 更新依赖
 cargo update
+cargo fix --edition # 迁移到新版本
 ```
 
 ## 13. 小结
